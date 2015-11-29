@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<title>Inteface</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>C++: Interface</h1> 
+  <p>The Contents are here...</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>An interface describes the behavior or capabilities of a C++ class without committing to a particular implementation of that class.<br><br>
+
+The C++ interfaces are implemented using abstract classes and these abstract classes should not be confused with data abstraction which is a concept of keeping implementation details separate from associated data.
+
+A class is made abstract by declaring at least one of its functions as pure virtual function. .</p>
+</div>
+  
+
+<div class="w3-third">
+  <h2>Example</h2>
+  <p>#include <iostream><br>
+ 
+using namespace std;<br>
+ 
+// Base class<br>
+class Shape <br>
+{<br>
+public:<br>
+   // pure virtual function providing interface framework.<br>
+   virtual int getArea() = 0;<br>
+   void setWidth(int w)<br>
+   {<br>
+      width = w;<br>
+   }<br>
+   void setHeight(int h)<br>
+   {<br>
+      height = h;<br>
+   }<br>
+protected:<br>
+   int width;<br>
+   int height;<br>
+};<br>
+ 
+// Derived classes<br>
+class Rectangle: public Shape<br>
+{<br>
+public:<br>
+   int getArea()<br>
+   { <br>
+      return (width * height); <br>
+   }<br>
+};<br>
+class Triangle: public Shape<br>
+{<br>
+public:<br>
+   int getArea()<br>
+   { <br>
+      return (width * height)/2; <br>
+   }<br>
+};<br>
+ 
+int main(void)<br>
+{<br>
+   Rectangle Rect;<br>
+   Triangle  Tri;<br>
+ 
+   Rect.setWidth(5);<br>
+   Rect.setHeight(7);<br>
+   // Print the area of the object.<br>
+   cout << "Total Rectangle area: " << Rect.getArea() << endl;<br>
+
+   Tri.setWidth(5);<br>
+   Tri.setHeight(7);<br>
+   // Print the area of the object.<br>
+   cout << "Total Triangle area: " << Tri.getArea() << endl;<br> 
+
+   return 0;<br>
+}<br><br>
+When the above code is compiled and executed, it produces the following result:<br>
+
+Total Rectangle area: 35<br>
+Total Triangle area: 17</p> 
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/cplusplus/cpp_interfaces.htm</p>
+  
+</div>
+
+</div>
+</body>
+</html>

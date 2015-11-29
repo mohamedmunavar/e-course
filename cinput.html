@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>File I/O</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>C: File I/O</h1> 
+  <p>The Contents are here...</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>A file represents a sequence of bytes, regardless of it being a text file or a binary file. C programming language provides access on high level functions as well as low level (OS level) calls to handle file on your storage devices. This chapter will take you through the important calls for file management.<br><br>
+
+You can use the fopen( ) function to create a new file or to open an existing file. This call will initialize an object of the type FILE, which contains all the information necessary to control the stream.</p>
+</div>
+  
+
+<div class="w3-third">
+  <h2>Example</h2>
+  <p>#include <stdio.h><br>
+
+main() {<br>
+
+   FILE *fp;<br>
+   char buff[255];<br>
+
+   fp = fopen("/tmp/test.txt", "r");<br>
+   fscanf(fp, "%s", buff);<br>
+   printf("1 : %s\n", buff );<br>
+
+   fgets(buff, 255, (FILE*)fp);<br>
+   printf("2: %s\n", buff );<br>
+   
+   fgets(buff, 255, (FILE*)fp);<br>
+   printf("3: %s\n", buff );<br>
+   fclose(fp);<br>
+
+}<br>
+When the above code is compiled and executed, it reads the file created in the previous section and produces the following result -<br>
+
+1 : This<br>
+2: is testing for fprintf...<br>
+
+3: This is testing for fputs...<br></p> 
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/cprogramming/c_file_io.htm</p>
+  
+</div>
+
+</div>
+</body>
+</html>

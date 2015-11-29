@@ -1,0 +1,8 @@
+body{
+background:darkblue;
+}
+nav{
+background:lightblue;
+color:black;
+display: inline-block;
+}

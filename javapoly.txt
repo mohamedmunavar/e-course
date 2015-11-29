@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title>Polymorphism</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>JAVA: Polymorphism</h1> 
+  <p>The Contents are here.....</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.It is important to know that the only possible way to access an object is through a reference variable. A reference variable can be of only one type. Once declared, the type of a reference variable cannot be changed.A reference variable can refer to any object of its declared type or any subtype of its declared type. A reference variable can be declared as a class or interface type.</p>
+</div>
+
+<div class="w3-third">
+  <h2>Example</h2>
+  <p>/* File name : Employee.java */<br>
+public class Employee<br>
+{<br>
+   private String name;<br>
+   private String address;<br>
+   private int number;<br>
+   public Employee(String name, String address, int number)<br>
+   {<br>
+      System.out.println("Constructing an Employee");<br>
+      this.name = name;<br>
+      this.address = address;<br>
+      this.number = number;<br>
+   }<br>
+   public void mailCheck()<br>
+   {<br>
+      System.out.println("Mailing a check to " + this.name<br>
+       + " " + this.address);<br>
+   }<br>
+   public String toString()<br>
+   {<br>
+      return name + " " + address + " " + number;<br>
+   }<br>
+   public String getName()<br>
+   {<br>
+      return name;<br>
+   }<br>
+   public String getAddress()<br>
+   {<br>
+      return address;<br>
+   }<br>
+   public void setAddress(String newAddress)<br>
+   {<br>
+      address = newAddress;<br>
+   }<br>
+   public int getNumber()<br>
+   {<br>
+     return number;<br>
+   }<br>
+}<br></p>
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/java/java_polymorphism.htm</p>
+</div>
+
+</div>
+</body>
+</html>

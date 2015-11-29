@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<title>Namespace</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>C#: Namespace</h1> 
+  <p>The Contents are here...</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>A namespace is designed for providing a way to keep one set of names separate from another. The class names declared in one namespace does not conflict with the same class names declared in another.<br>
+
+
+A namespace definition begins with the keyword namespace followed by the namespace name </p>
+</div>
+  
+
+<div class="w3-third">
+  <h2>Example</h2><br><br>
+  <p>using System;<br>
+namespace first_space<br>
+{<br>
+   class namespace_cl<br>
+   {<br>
+      public void func()<br>
+      {<br>
+         Console.WriteLine("Inside first_space");<br>
+      }<br>
+   }<br>
+}<br>
+
+namespace second_space<br>
+{<br>
+   class namespace_cl<br>
+   {<br>
+      public void func()<br>
+      {<br>
+         Console.WriteLine("Inside second_space");<br>
+      }<br>
+   }<br>
+}<br>
+
+class TestClass<br>
+{<br>
+   static void Main(string[] args)<br>
+   {<br>
+      first_space.namespace_cl fc = new first_space.namespace_cl();<br>
+      second_space.namespace_cl sc = new second_space.namespace_cl();<br>
+      fc.func();<br>
+      sc.func();<br>
+      Console.ReadKey();<br>
+   }<br>
+}<br>
+When the above code is compiled and executed, it produces the following result:<br>
+
+Inside first_space<br>
+Inside second_space<br></p> 
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/csharp/csharp_namespaces.htm</p>
+  
+</div>
+
+</div>
+</body>
+</html>

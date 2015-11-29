@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<title>Packages</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>JAVA:Packages</h1> 
+  <p>The Contents are here.....</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>Packages are used in Java in order to prevent naming conflicts, to control access, to make searching/locating and usage of classes, interfaces, enumerations and annotations easier, etc.A Package can be defined as a grouping of related types (classes, interfaces, enumerations and annotations ) providing access protection and name space management.</p>
+</div>
+
+<div class="w3-third">
+  <h2>Example</h2>
+  <p>package animals;<br>
+
+/* File name : MammalInt.java */<br>
+public class MammalInt implements Animal{<br>
+
+   public void eat(){<br>
+      System.out.println("Mammal eats");<br>
+   }<br>
+   public void travel(){<br>
+      System.out.println("Mammal travels");<br>
+   } <br>
+
+   public int noOfLegs(){<br>
+      return 0;<br>
+   }<br>
+
+   public static void main(String args[]){<br>
+      MammalInt m = new MammalInt();<br>
+      m.eat();<br>
+      m.travel();<br>
+   }<br>
+} <br>
+Now compile the java files as shown below:<br><br>
+
+$ javac -d . Animal.java <br>
+$ javac -d . MammalInt.java<br></p>
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/java/java_packages.htm</p>
+</div>
+
+</div>
+</body>
+</html>

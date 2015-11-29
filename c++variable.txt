@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<title>Variable Scope</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>C++ Variable Scope</h1> 
+  <p>The Contents are here...</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>A scope is a region of the program and broadly speaking there are three places, where variables can be declared:<br><br>
+
+Inside a function or a block which is called local variables,<br>
+
+In the definition of function parameters which is called formal parameters.<br>
+
+Outside of all functions which is called global variables.</p>
+</div>
+  
+
+<div class="w3-third">
+  <h2>Example</h2>
+  <p>#include <iostream.h><br>
+using namespace std;<br>
+ 
+// Global variable declaration:<br>
+int g;<br>
+ 
+int main ()<br>
+{
+  // Local variable declaration:<br>
+  int a, b;<br>
+ 
+  // actual initialization<br>
+  a = 10;<br>
+  b = 20;<br>
+  g = a + b;<br>
+ 
+  cout << g;<br>
+ 
+  return 0;<br>
+}</p> 
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/cplusplus/cpp_variable_scope.htm</p>
+  
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<title>Overriding</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>JAVA: Overriding</h1> 
+  <p>The Contents are here.....</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>If a class inherits a method from its super class, then there is a chance to override the method provided that it is not marked final.
+The benefit of overriding is: ability to define a behaviour that's specific to the subclass type which means a subclass can implement a parent class method based on its requirement.In object-oriented terms, overriding means to override the functionality of an existing method.</p>
+</div>
+
+<div class="w3-third">
+  <h2>Example</h2>
+  <p>class Animal{<br>
+
+   public void move()<br>{<br>
+      System.out.println("Animals can move");<br>
+   }<br>
+}<br>
+class Dog extends Animal{<br>
+
+   public void move(){<br>
+      System.out.println("Dogs can walk and run");<br>
+   }<br>
+}<br>
+
+public class TestDog{<br>
+
+   public static void main(String args[]){<br>
+      Animal a = new Animal(); // Animal reference and object<br>
+      Animal b = new Dog(); // Animal reference but Dog object<br>
+
+      a.move();// runs the method in Animal class<br>
+
+      b.move();//Runs the method in Dog class<br>
+   }<br>
+}<br></p>
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/java/java_overriding.htm</p>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>Abstraction</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>JAVA: Abstraction</h1> 
+  <p>The contents are here.....</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>In Object oriented programming, Abstraction is a process process of hiding the implementation details from the user, only the functionality will be provided to the user. In other words user will have the information on what the object does instead of how it does it.In Java Abstraction is achieved using Abstract classes, and Interfaces.</p>
+</div>
+
+<div class="w3-third">
+  <h2>Example</h2>
+  <p>/* File name : Employee.java */<br>
+public abstract class Employee<br>
+{<br>
+   private String name;<br>
+   private String address;<br>
+   private int number;<br>
+   public Employee(String name, String address, int number)<br>
+   {<br>
+      System.out.println("Constructing an Employee");<br>
+      this.name = name;<br>
+      this.address = address;<br>
+      this.number = number;<br>
+   }<br>
+   public double computePay()<br>
+   {<br>
+     System.out.println("Inside Employee computePay");<br>
+     return 0.0;<br>
+   }<br>
+   public void mailCheck()<br>
+   {<br>
+      System.out.println("Mailing a check to " + this.name<br>
+       + " " + this.address);<br>
+   }<br>
+   public String toString()<br>
+   {<br>
+      return name + " " + address + " " + number;<br>
+   }<br>
+   public String getName()<br>
+   {<br>
+      return name;<br>
+   }<br>
+   public String getAddress()<br>
+   {<br>
+      return address;<br>
+   }<br>
+   public void setAddress(String newAddress)<br>
+   {<br>
+      address = newAddress;<br>
+   }<br>
+   public int getNumber()<br>
+   {<br>
+     return number;<br>
+   }<br>
+}<br></p>
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/java/java_abstraction.htm</p>
+</div>
+
+</div>
+</body>
+</html>

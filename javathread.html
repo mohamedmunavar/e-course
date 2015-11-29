@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<title>Mutithreading</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>JAVA:Multithread</h1> 
+  <p>The Contents are here.....</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>Java is amulti threaded programming language which means we can develop multi threaded program using Java. A multi threaded program contains two or more parts that can run concurrently and each part can handle different task at the same time making optimal use of the available resources specially when your computer has multiple CPUs.By definition multitasking is when multiple processes share common processing resources such as a CPU. Multi threading extends the idea of multitasking into applications where you can subdivide specific operations within a single application into individual threads. Each of the threads can run in parallel. The OS divides processing time not only among different applications, but also among each thread within an application.
+Multi threading enables you to write in a way where multiple activities can proceed concurrently in the same program.</p>
+</div>
+
+<div class="w3-third">
+  <h2>Example</h2>
+<p>
+class RunnableDemo implements Runnable {<br>
+   private Thread t;<br>
+   private String threadName;<br>
+   
+   RunnableDemo( String name){<br>
+       threadName = name;<br>
+       System.out.println("Creating " +  threadName );<br>
+   }<br>
+   public void run() {
+      System.out.println("Running " +  threadName );<br>
+      try {<br>
+         for(int i = 4; i > 0; i--) {<br>
+            System.out.println("Thread: " + threadName + ", " + i);<br>
+            // Let the thread sleep for a while.<br>
+            Thread.sleep(50);<br>
+         }<br>
+     } catch (InterruptedException e) {<br>
+         System.out.println("Thread " +  threadName + " interrupted.");<br>
+     }<br>
+     System.out.println("Thread " +  threadName + " exiting.");<br>
+   }<br>
+   
+   public void start ()<br>
+   {<br>
+      System.out.println("Starting " +  threadName );<br>
+      if (t == null)<br>
+      {
+         t = new Thread (this, threadName);<br>
+         t.start ();<br>
+      }<br>
+   }
+<br>
+}
+<br>
+public class TestThread {<br>
+   public static void main(String args[]) {<br>
+   
+      RunnableDemo R1 = new RunnableDemo( "Thread-1");<br>
+      R1.start();<br>
+      
+      RunnableDemo R2 = new RunnableDemo( "Thread-2");<br>
+      R2.start();<br>
+   }  <br> 
+}<br>
+This would produce the following result:<br>
+
+Creating Thread-1<br>
+Starting Thread-1<br>
+Creating Thread-2<br>
+Starting Thread-2<br>
+Running Thread-1<br>
+Thread: Thread-1, 4<br>
+Running Thread-2<br>
+Thread: Thread-2, 4<br>
+Thread: Thread-1, 3<br>
+Thread: Thread-2, 3<br>
+Thread: Thread-1, 2<br>
+Thread: Thread-2, 2<br>
+Thread: Thread-1, 1<br>
+Thread: Thread-2, 1<br>
+Thread Thread-1 exiting.<br>
+Thread Thread-2 exiting.<br>
+
+<br></p>
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/java/java_multithreading.htm</p>
+</div>
+
+</div>
+</body>
+</html>

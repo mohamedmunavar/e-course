@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<title>Encapsulation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>C#: Encapsulation</h1> 
+  <p>The Contents are here...</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>Encapsulation is defined 'as the process of enclosing one or more items within a physical or logical package'. Encapsulation, in object oriented programming methodology, prevents access to implementation details.<br>
+
+Abstraction and encapsulation are related features in object oriented programming. Abstraction allows making relevant information visible and encapsulation enables a programmer to implement the desired level of abstraction.<br>
+
+Encapsulation is implemented by using access specifiers. An access specifier defines the scope and visibility of a class member. C# supports the following access specifiers:<br>
+
+Public<br>
+Private<br>
+Protected<br>
+Internal<br>
+Protected internal<br></p>
+</div>
+  
+
+<div class="w3-third">
+  <h2>Example</h2><br>
+  <p>#include <stdio.h><br>
+ 
+int main () {<br>
+
+   int n[ 10 ]; /* n is an array of 10 integers */<br>
+   int i,j;<br>
+ 
+   /* initialize elements of array n to 0 */<br>         
+   for ( i = 0; i < 10; i++ ) {<br>
+      n[ i ] = i + 100; /* set element at location i to i + 100 */<br>
+   }<br>
+   
+   /* output each array element's value */<br>
+   for (j = 0; j < 10; j++ ) {<br>
+      printf("Element[%d] = %d\n", j, n[j] );<br>
+   }<br>
+ 
+   return 0;<br>
+}<br><br>
+When the above code is compiled and executed, it produces the following result -<br>
+
+Element[0] = 100<br>
+Element[1] = 101<br>
+Element[2] = 102<br>
+Element[3] = 103<br>
+Element[4] = 104<br>
+Element[5] = 105<br>
+Element[6] = 106<br>
+Element[7] = 107<br>
+Element[8] = 108<br>
+Element[9] = 109<br></p> 
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/csharp/csharp_encapsulation.htm</p>
+  
+</div>
+
+</div>
+</body>
+</html>

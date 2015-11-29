@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>Polymorphism</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>C#: Polymorphism</h1> 
+  <p>The Contents are here...</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>The word polymorphism means having many forms. In object-oriented programming paradigm, polymorphism is often expressed as 'one interface, multiple functions'.<br>
+
+Polymorphism can be static or dynamic. In static polymorphism, the response to a function is determined at the compile time. In dynamic polymorphism, it is decided at run-time.</p>
+</div>
+  
+
+<div class="w3-third">
+  <h2>Example</h2><br><br>
+  <p>using System;
+namespace PolymorphismApplication
+{
+   class Printdata
+   {
+      void print(int i)
+      {
+         Console.WriteLine("Printing int: {0}", i );
+      }
+
+      void print(double f)
+      {
+         Console.WriteLine("Printing float: {0}" , f);
+      }
+
+      void print(string s)
+      {
+         Console.WriteLine("Printing string: {0}", s);
+      }
+      static void Main(string[] args)
+      {
+         Printdata p = new Printdata();
+         
+         // Call print to print integer
+         p.print(5);
+         
+         // Call print to print float
+         p.print(500.263);
+         
+         // Call print to print string
+         p.print("Hello C++");
+         Console.ReadKey();
+      }
+   }
+}
+When the above code is compiled and executed, it produces the following result:
+
+Printing int: 5
+Printing float: 500.263
+Printing string: Hello C++</p> 
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/csharp/csharp_polymorphism.htm</p>
+  
+</div>
+
+</div>
+</body>
+</html>

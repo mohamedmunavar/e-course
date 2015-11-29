@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<title>Structures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>C: Structures</h1> 
+  <p>The Contents are here...</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>Arrays allow to define type of variables that can hold several data items of the same kind. Similarly structure is another user defined data type available in C that allows to combine data items of different kinds.
+
+Structures are used to represent a record. Suppose you want to keep track of your books in a library. You might want to track the following attributes about each book -<br>
+
+Title<br>
+Author<br>
+Subject<br>
+Book ID<br></p>
+</div>
+  
+
+<div class="w3-third">
+  <h2>Example</h2>
+  <p>#include <stdio.h><br>
+#include <string.h><br>
+ 
+struct Books {<br>
+   char  title[50];<br>
+   char  author[50];<br>
+   char  subject[100];<br>
+   int   book_id;<br>
+};<br>
+ 
+int main( ) {<br>
+
+   struct Books Book1;        /* Declare Book1 of type Book */<br>
+   struct Books Book2;        /* Declare Book2 of type Book */<br>
+ 
+   /* book 1 specification */<br>
+   strcpy( Book1.title, "C Programming");<br>
+   strcpy( Book1.author, "Nuha Ali"); <br>
+   strcpy( Book1.subject, "C Programming Tutorial");<br>
+   Book1.book_id = 6495407;<br>
+
+   /* book 2 specification */<br>
+   strcpy( Book2.title, "Telecom Billing");<br>
+   strcpy( Book2.author, "Zara Ali");<br>
+   strcpy( Book2.subject, "Telecom Billing Tutorial");<br>
+   Book2.book_id = 6495700;<br>
+ 
+   /* print Book1 info */<br>
+   printf( "Book 1 title : %s\n", Book1.title);<br>
+   printf( "Book 1 author : %s\n", Book1.author);<br>
+   printf( "Book 1 subject : %s\n", Book1.subject);<br>
+   printf( "Book 1 book_id : %d\n", Book1.book_id);<br>
+
+   /* print Book2 info */<br>
+   printf( "Book 2 title : %s\n", Book2.title);<br>
+   printf( "Book 2 author : %s\n", Book2.author);<br>
+   printf( "Book 2 subject : %s\n", Book2.subject);<br>
+   printf( "Book 2 book_id : %d\n", Book2.book_id);<br>
+
+   return 0;<br>
+}<br><br>
+When the above code is compiled and executed, it produces the following result -<br>
+
+Book 1 title : C Programming<br>
+Book 1 author : Nuha Ali<br>
+Book 1 subject : C Programming Tutorial<br>
+Book 1 book_id : 6495407<br>
+Book 2 title : Telecom Billing<br>
+Book 2 author : Zara Ali<br>
+Book 2 subject : Telecom Billing Tutorial<br>
+Book 2 book_id : 6495700</p> 
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/cprogramming/c_structures.htm</p>
+  
+</div>
+
+</div>
+</body>
+</html>

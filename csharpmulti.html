@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<title>Multithreading</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>C#: Multi-threading</h1> 
+  <p>The Contents are here...</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>A thread is defined as the execution path of a program. Each thread defines a unique flow of control. If your application involves complicated and time consuming operations, then it is often helpful to set different execution paths or threads, with each thread performing a particular job.<br>
+
+Threads are lightweight processes. One common example of use of thread is implementation of concurrent programming by modern operating systems. Use of threads saves wastage of CPU cycle and increase efficiency of an application.<br>
+
+So far we wrote the programs where a single thread runs as a single process which is the running instance of the application. However, this way the application can perform one job at a time. To make it execute more than one task at a time, it could be divided into smaller threads.<br></p>
+</div>
+  
+
+<div class="w3-third">
+  <h2>Example</h2><br><br>
+  <p>using System;<br>
+using System.Threading;<br>
+
+namespace MultithreadingApplication<br>
+{<br>
+   class ThreadCreationProgram<br>
+   {<br>
+      public static void CallToChildThread()<br>
+      {<br>
+         Console.WriteLine("Child thread starts");<br>
+      }
+      
+      static void Main(string[] args)<br>
+      {<br>
+         ThreadStart childref = new ThreadStart(CallToChildThread);<br>
+         Console.WriteLine("In Main: Creating the Child thread");<br>
+         Thread childThread = new Thread(childref);<br>
+         childThread.Start();<br>
+         Console.ReadKey();<br>
+      }<br>
+   }<br>
+}<br>
+When the above code is compiled and executed, it produces the following result:<br>
+
+In Main: Creating the Child thread<br>
+Child thread starts</p> 
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/csharp/multithreading.htm</p>
+  
+</div>
+
+</div>
+</body>
+</html>

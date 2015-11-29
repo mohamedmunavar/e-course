@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>Storage Classes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>C: Storage Classes</h1> 
+  <p>The Contents are here...</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>A storage class defines the scope (visibility) and life-time of variables and/or functions within a C Program. They precede the type that they modify. We have four different storage classes in a C program -<br>
+
+auto<br>
+register<br>
+static<br>
+extern<br></p>
+</div>
+  
+
+<div class="w3-third">
+  <h2>Example</h2>
+  <p>#include <stdio.h><br>
+ 
+/* function declaration */<br>
+void func(void);<br>
+ 
+static int count = 5; /* global variable */<br>
+ 
+main() {<br>
+
+   while(count--) {<br>
+      func();<br>
+   }<br>
+	
+   return 0;<br>
+}<br>
+
+/* function definition */<br>
+void func( void ) {<br>
+
+   static int i = 5; /* local static variable */<br>
+   i++;<br>
+
+   printf("i is %d and count is %d\n", i, count);<br>
+}<br><br>
+When the above code is compiled and executed, it produces the following result -<br>
+
+i is 6 and count is 4<br>
+i is 7 and count is 3<br>
+i is 8 and count is 2<br>
+i is 9 and count is 1<br>
+i is 10 and count is 0</p> 
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/cprogramming/c_storage_classes.htm</p>
+  
+</div>
+
+</div>
+</body>
+</html>

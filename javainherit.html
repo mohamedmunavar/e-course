@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>Inheritance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<body>
+
+<div class="w3-container w3-orange">
+  <h1>JAVA: Inheritance</h1> 
+  <p>The Contents are here.....</p> 
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-third">
+  <h2>Description</h2>
+  <p>Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another. With the use of inheritance the information is made manageable in a hierarchical order.The class which inherits the properties of other is known as subclass (derived class, child class) and the class whose properties are inherited is known as superclass (base class, parent class).</p>
+</div>
+
+<div class="w3-third">
+  <h2>Eample</h2>
+  <p>class Calculation<br>
+{ <br>
+   int z;<br>
+   public void addition(int x, int y)<br>{<br>
+      z=x+y;<br>
+      System.out.println("The sum of the given numbers:"+z);<br>
+   }<br>
+   public void Substraction(int x,int y){<br>
+      z=x-y;<br>
+      System.out.println("The difference between the given numbers:"+z);<br>
+   }<br>
+   
+}<br>
+
+public class My_Calculation extends Calculation{   
+  <br>
+   public void multiplication(int x, int y){<br>
+      z=x*y;<br>
+      System.out.println("The product of the given numbers:"+z);<br>
+   }<br>
+   public static void main(String args[]){<br>
+      int a=20, b=10;<br>
+      My_Calculation demo = new My_Calculation();<br>
+      demo.addition(a, b);<br>
+      demo.Substraction(a, b);<br>
+      demo.multiplication(a, b);      <br>
+      
+   }<br>
+
+}<br></p>
+</div>
+
+<div class="w3-third">
+  <h2>Reference</h2>
+  <p>http://www.tutorialspoint.com/java/java_inheritance.htm</p>
+</div>
+
+</div>
+</body>
+</html>
